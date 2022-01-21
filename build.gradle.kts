@@ -9,7 +9,7 @@ plugins {
 }
 
 group = "pro.streem"
-version = "1.0-SNAPSHOT"
+version = "0.1.0-SNAPSHOT"
 
 kotlin {
     explicitApi()
@@ -38,6 +38,9 @@ repositories {
 
 dependencies {
     implementation(kotlin("stdlib"))
+    implementation("com.nimbusds:nimbus-jose-jwt:9.15.2")
+
+    testImplementation(kotlin("test"))
 
     errorprone("com.google.errorprone:error_prone_core:2.10.0")
 }
