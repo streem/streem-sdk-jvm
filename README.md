@@ -66,7 +66,7 @@ _Java_
 var user = // an object that describes your logged-in user
 
 // the user's ID is required to construct a token
-var token = streem.tokenBuilder(user.id)
+var token = streem.buildToken(user.id)
         // these fields are not required, but are recommended
         .name(user.name)
         .email(user.email)

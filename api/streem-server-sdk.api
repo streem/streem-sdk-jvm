@@ -1,10 +1,10 @@
 public final class pro/streem/sdk/Streem {
 	public static final field Companion Lpro/streem/sdk/Streem$Companion;
 	public synthetic fun <init> (Lpro/streem/sdk/Config;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun buildToken (Ljava/lang/String;)Lpro/streem/sdk/TokenBuilder;
 	public final fun buildToken (Ljava/lang/String;Lkotlin/jvm/functions/Function1;)Ljava/lang/String;
 	public static final fun getInstance (Ljava/lang/String;Ljava/lang/String;)Lpro/streem/sdk/Streem;
 	public static final fun getInstance (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lpro/streem/sdk/Streem;
-	public final fun tokenBuilder (Ljava/lang/String;)Lpro/streem/sdk/TokenBuilder;
 }
 
 public final class pro/streem/sdk/Streem$Companion {

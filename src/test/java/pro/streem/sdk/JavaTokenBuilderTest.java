@@ -23,7 +23,7 @@ class JavaTokenBuilderTest {
 
         final var streem = Streem.getInstance(TEST_API_KEY_ID, TEST_API_KEY_SECRET, TEST_API_ENVIRONMENT);
 
-        final var token = streem.tokenBuilder(externalUserId)
+        final var token = streem.buildToken(externalUserId)
                 .name(name)
                 .avatarUri(avatarUri)
                 .email(email)

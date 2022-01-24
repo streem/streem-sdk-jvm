@@ -5,16 +5,18 @@ public class Streem private constructor(private val config: Config) {
     /**
      * Returns a [TokenBuilder] that can be used to create a Streem Token.
      *
-     * This method is optimized for use from Java code. For Kotlin code, prefer the [buildToken] method.
+     * This method is optimized for use from Java code. For Kotlin code, prefer the [buildToken] method that takes a
+     * builder lambda.
      *
      * @param userId The user ID of the user to authenticate with this token.
      */
-    public fun tokenBuilder(userId: String): TokenBuilder = TokenBuilder(config, userId)
+    public fun buildToken(userId: String): TokenBuilder = TokenBuilder(config, userId)
 
     /**
      * Returns a string representation of a Streem Token configured with [builder].
      *
-     * This method is optimized for use from Kotlin code. For Java code, prefer the [tokenBuilder] method.
+     * This method is optimized for use from Kotlin code. For Java code, prefer the [buildToken] method that returns a
+     * [TokenBuilder].
      *
      * @param userId The user ID of the user to authenticate with this token.
      */
