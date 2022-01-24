@@ -13,8 +13,28 @@ public final class pro/streem/sdk/Streem$Companion {
 	public static synthetic fun getInstance$default (Lpro/streem/sdk/Streem$Companion;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/lang/Object;)Lpro/streem/sdk/Streem;
 }
 
+public final class pro/streem/sdk/StreemToken {
+	public static final field Companion Lpro/streem/sdk/StreemToken$Companion;
+	public final fun getAvatarUri ()Ljava/net/URI;
+	public final fun getEmail ()Ljava/lang/String;
+	public final fun getName ()Ljava/lang/String;
+	public final fun getSessionExpiration ()Ljava/time/Duration;
+	public final fun getTokenExpiration ()Ljava/time/Duration;
+	public final fun getUserId ()Ljava/lang/String;
+	public final fun setAvatarUri (Ljava/net/URI;)V
+	public final fun setEmail (Ljava/lang/String;)V
+	public final fun setName (Ljava/lang/String;)V
+	public final fun setSessionExpiration (Ljava/time/Duration;)V
+	public final fun setTokenExpiration (Ljava/time/Duration;)V
+	public final fun setUserId (Ljava/lang/String;)V
+}
+
+public final class pro/streem/sdk/StreemToken$Companion {
+	public final fun getDefaultSessionExpiration ()Ljava/time/Duration;
+	public final fun getDefaultTokenExpiration ()Ljava/time/Duration;
+}
+
 public final class pro/streem/sdk/TokenBuilder {
-	public static final field Companion Lpro/streem/sdk/TokenBuilder$Companion;
 	public final fun avatarUri (Ljava/net/URI;)Lpro/streem/sdk/TokenBuilder;
 	public final fun build ()Ljava/lang/String;
 	public final fun email (Ljava/lang/String;)Lpro/streem/sdk/TokenBuilder;
@@ -27,8 +47,6 @@ public final class pro/streem/sdk/TokenBuilder {
 	public final fun name (Ljava/lang/String;)Lpro/streem/sdk/TokenBuilder;
 	public final fun sessionExpiration (Ljava/time/Duration;)Lpro/streem/sdk/TokenBuilder;
 	public final fun tokenExpiration (Ljava/time/Duration;)Lpro/streem/sdk/TokenBuilder;
-}
-
-public final class pro/streem/sdk/TokenBuilder$Companion {
+	public final fun userId (Ljava/lang/String;)Lpro/streem/sdk/TokenBuilder;
 }
 

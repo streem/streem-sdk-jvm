@@ -26,11 +26,11 @@ internal class TokenBuilderTest {
         )
 
         val token = streem.buildToken(externalUserId) {
-            name(name)
-            avatarUri(avatarUri)
-            email(email)
-            tokenExpiration(tokenExpiration)
-            sessionExpiration(sessionExpiration)
+            this.name = name
+            this.avatarUri = avatarUri
+            this.email = email
+            this.tokenExpiration = tokenExpiration
+            this.sessionExpiration = sessionExpiration
         }
 
         val claims = assertDoesNotThrow { SignedJWT.parse(token).jwtClaimsSet }

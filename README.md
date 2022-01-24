@@ -47,17 +47,17 @@ val user = // an object that describes your logged-in user
 // the user's ID is required to construct a token
 val token = streem.buildToken(user.id) {
     // these fields are not required, but are recommended
-    name(user.name)
-    email(user.email)
-    avatarUri(user.avatarUri)
+    name = user.name
+    email = user.email
+    avatarUri = user.avatarUri
 
     // optional fields
     // Determines how long this token is valid for starting a session
     // (5 minutes is the default)
-    tokenExpiration(Duration.ofMinutes(5)) 
+    tokenExpiration = Duration.ofMinutes(5))
     // Once the session has started, how long can the user remain logged in
     // (4 hours is the default) 
-    sessionExpiration(Duration.ofHours(4))
+    sessionExpiration = Duration.ofHours(4)
 }
 ```
 
