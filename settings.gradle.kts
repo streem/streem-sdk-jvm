@@ -1,2 +1,2 @@
-rootProject.name = "streem-sdk-jvm"
+rootProject.name = "streem-server-sdk"
 
