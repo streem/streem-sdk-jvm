@@ -8,7 +8,7 @@ Add the Streem SDK dependency to your project's `build.gradle` file:
 
 ```groovy
 dependencies {
-    implementation("pro.streem:streem-server-sdk:0.1.0")
+    implementation("pro.streem:streem-server-sdk:0.1.1")
 }
 ```
 
@@ -38,7 +38,7 @@ var streem = Streem.getInstance(
 
 ### Streem Tokens
 
-To create a Streem Token, call the `buildToken()` method (Kotlin) or create a `TokenBuilder` (Java) and then specify the details for the currently logged-in user:
+To create a Streem Token, call the `buildToken()` method and then specify the details for the currently logged-in user via either a lambda block (Kotlin) or the returned `TokenBuilder` (Java):
 
 _Kotlin_
 ```kotlin
