@@ -41,16 +41,16 @@ class JavaTokenBuilderTest {
         assertEquals(claims.getURIClaim("picture"), avatarUri);
         assertEquals(claims.getStringClaim("email"), email);
 
-        // Expiration dates should be within one second
+        // Expiration dates should be within a few seconds
         assertTrue(Duration.between(Instant.now(), claims.getExpirationTime().toInstant())
                 .minus(tokenExpiration)
                 .abs()
-                .compareTo(Duration.ofSeconds(1)) < 0
+                .compareTo(Duration.ofSeconds(5)) < 0
         );
         assertTrue(Duration.between(Instant.now(), claims.getDateClaim("session_exp").toInstant())
                 .minus(sessionExpiration)
                 .abs()
-                .compareTo(Duration.ofSeconds(1)) < 0
+                .compareTo(Duration.ofSeconds(5)) < 0
         );
     }
 
