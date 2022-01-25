@@ -1,4 +1,4 @@
-# Streem SDK for Java & Kotlin
+# Streem Server SDK for Java & Kotlin
 
 Server-side JVM library for interacting with the Streem API, and generation of Streem Tokens for use in client SDKs or Embedded SSO.
 
@@ -8,7 +8,7 @@ Add the Streem SDK dependency to your project's `build.gradle` file:
 
 ```groovy
 dependencies {
-    implementation("pro.streem:streem-sdk-jvm:0.1.0")
+    implementation("pro.streem:streem-server-sdk:0.1.0")
 }
 ```
 
