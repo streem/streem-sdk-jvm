@@ -75,6 +75,38 @@ publishing {
     publications {
         create<MavenPublication>("streemServerSdk") {
             from(components["java"])
+
+            pom {
+                name.set(artifactId)
+                description.set("Streem Server SDK for Java & Kotlin")
+                url.set("https://github.com/streem/streem-sdk-jvm")
+
+                licenses {
+                    license {
+                        name.set("MIT License")
+                        url.set("https://opensource.org/licenses/MIT")
+                    }
+                }
+
+                organization {
+                    name.set("Streem, LLC")
+                    url.set("https://github.com/streem")
+                }
+
+                developers {
+                    developer {
+                        id.set("streem")
+                        name.set("Streem, LLC")
+                        url.set("https://github.com/streem")
+                    }
+                }
+
+                scm {
+                    connection.set("scm:git:git@github.com:streem/streem-sdk-jvm.git")
+                    developerConnection.set("scm:git:git@github.com:streem/streem-sdk-jvm.git")
+                    url.set("git@github.com:streem/streem-sdk-jvm.git")
+                }
+            }
         }
     }
 
