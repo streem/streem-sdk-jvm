@@ -1,0 +1,34 @@
+$dokka.format:html-v1
+$dokka.linkExtension:html
+$dokka.location:pro.streem.sdk////PointingToDeclaration/streem-server-sdk/pro.streem.sdk/index.html
+$dokka.location:pro.streem.sdk/Streem.Companion///PointingToDeclaration/streem-server-sdk/pro.streem.sdk/-streem/-companion/index.html
+$dokka.location:pro.streem.sdk/Streem.Companion/getInstance/#kotlin.String#kotlin.String#kotlin.String/PointingToDeclaration/streem-server-sdk/pro.streem.sdk/-streem/-companion/get-instance.html
+$dokka.location:pro.streem.sdk/Streem///PointingToDeclaration/streem-server-sdk/pro.streem.sdk/-streem/index.html
+$dokka.location:pro.streem.sdk/Streem/buildToken/#kotlin.String#kotlin.Function1[pro.streem.sdk.StreemToken,kotlin.Unit]/PointingToDeclaration/streem-server-sdk/pro.streem.sdk/-streem/build-token.html
+$dokka.location:pro.streem.sdk/Streem/buildToken/#kotlin.String/PointingToDeclaration/streem-server-sdk/pro.streem.sdk/-streem/build-token.html
+$dokka.location:pro.streem.sdk/StreemToken.Companion///PointingToDeclaration/streem-server-sdk/pro.streem.sdk/-streem-token/-companion/index.html
+$dokka.location:pro.streem.sdk/StreemToken.Companion/DefaultSessionExpiration/#/PointingToDeclaration/streem-server-sdk/pro.streem.sdk/-streem-token/-companion/-default-session-expiration.html
+$dokka.location:pro.streem.sdk/StreemToken.Companion/DefaultTokenExpiration/#/PointingToDeclaration/streem-server-sdk/pro.streem.sdk/-streem-token/-companion/-default-token-expiration.html
+$dokka.location:pro.streem.sdk/StreemToken///PointingToDeclaration/streem-server-sdk/pro.streem.sdk/-streem-token/index.html
+$dokka.location:pro.streem.sdk/StreemToken/avatarUri/#/PointingToDeclaration/streem-server-sdk/pro.streem.sdk/-streem-token/avatar-uri.html
+$dokka.location:pro.streem.sdk/StreemToken/email/#/PointingToDeclaration/streem-server-sdk/pro.streem.sdk/-streem-token/email.html
+$dokka.location:pro.streem.sdk/StreemToken/name/#/PointingToDeclaration/streem-server-sdk/pro.streem.sdk/-streem-token/name.html
+$dokka.location:pro.streem.sdk/StreemToken/sessionExpiration/#/PointingToDeclaration/streem-server-sdk/pro.streem.sdk/-streem-token/session-expiration.html
+$dokka.location:pro.streem.sdk/StreemToken/tokenExpiration/#/PointingToDeclaration/streem-server-sdk/pro.streem.sdk/-streem-token/token-expiration.html
+$dokka.location:pro.streem.sdk/StreemToken/userId/#/PointingToDeclaration/streem-server-sdk/pro.streem.sdk/-streem-token/user-id.html
+$dokka.location:pro.streem.sdk/TokenBuilder///PointingToDeclaration/streem-server-sdk/pro.streem.sdk/-token-builder/index.html
+$dokka.location:pro.streem.sdk/TokenBuilder/avatarUri/#/PointingToDeclaration/streem-server-sdk/pro.streem.sdk/-token-builder/avatar-uri.html
+$dokka.location:pro.streem.sdk/TokenBuilder/avatarUri/#java.net.URI?/PointingToDeclaration/streem-server-sdk/pro.streem.sdk/-token-builder/avatar-uri.html
+$dokka.location:pro.streem.sdk/TokenBuilder/build/#/PointingToDeclaration/streem-server-sdk/pro.streem.sdk/-token-builder/build.html
+$dokka.location:pro.streem.sdk/TokenBuilder/email/#/PointingToDeclaration/streem-server-sdk/pro.streem.sdk/-token-builder/email.html
+$dokka.location:pro.streem.sdk/TokenBuilder/email/#kotlin.String?/PointingToDeclaration/streem-server-sdk/pro.streem.sdk/-token-builder/email.html
+$dokka.location:pro.streem.sdk/TokenBuilder/name/#/PointingToDeclaration/streem-server-sdk/pro.streem.sdk/-token-builder/name.html
+$dokka.location:pro.streem.sdk/TokenBuilder/name/#kotlin.String?/PointingToDeclaration/streem-server-sdk/pro.streem.sdk/-token-builder/name.html
+$dokka.location:pro.streem.sdk/TokenBuilder/sessionExpiration/#/PointingToDeclaration/streem-server-sdk/pro.streem.sdk/-token-builder/session-expiration.html
+$dokka.location:pro.streem.sdk/TokenBuilder/sessionExpiration/#java.time.Duration?/PointingToDeclaration/streem-server-sdk/pro.streem.sdk/-token-builder/session-expiration.html
+$dokka.location:pro.streem.sdk/TokenBuilder/tokenExpiration/#/PointingToDeclaration/streem-server-sdk/pro.streem.sdk/-token-builder/token-expiration.html
+$dokka.location:pro.streem.sdk/TokenBuilder/tokenExpiration/#java.time.Duration?/PointingToDeclaration/streem-server-sdk/pro.streem.sdk/-token-builder/token-expiration.html
+$dokka.location:pro.streem.sdk/TokenBuilder/userId/#/PointingToDeclaration/streem-server-sdk/pro.streem.sdk/-token-builder/user-id.html
+$dokka.location:pro.streem.sdk/TokenBuilder/userId/#kotlin.String/PointingToDeclaration/streem-server-sdk/pro.streem.sdk/-token-builder/user-id.html
+pro.streem.sdk
+
