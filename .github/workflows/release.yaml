@@ -139,3 +139,35 @@ jobs:
           password: ${{ secrets.SONATYPE_API_KEY }}
           staging_repository_id: ${{ needs.create-staging-repository.outputs.repository_id }}
           base_url: ${{ env.SONATYPE_BASE_URL }}
+
+  publish-docs:
+    needs: [publish, finalize-staging-repository]
+    name: Publish API reference to GitHub Pages
+    runs-on: ubuntu-20.04
+
+    steps:
+      - name: Checkout the repo
+        uses: actions/checkout@v2
+
+      - name: Validate Gradle Wrapper
+        uses: gradle/wrapper-validation-action@v1
+
+      - name: Cache gradle
+        uses: actions/cache@v2
+        with:
+          path: |
+            ~/.gradle/caches
+            ~/.gradle/wrapper
+          key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle*') }}
+          restore-keys: |
+            ${{ runner.os }}-gradle-
+
+      - name: Install Java ${{ env.JAVA_VERSION }}
+        uses: actions/setup-java@v1
+        with:
+          java-version: ${{ env.JAVA_VERSION }}
+
+      - name: Builds docs and publish to GitHub Pages
+        env:
+          GRGIT_USER: ${{ secrets.GITHUB_TOKEN }}
+        run: ./gradlew gitPublishPush --stacktrace

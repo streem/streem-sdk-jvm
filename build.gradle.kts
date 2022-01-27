@@ -1,10 +1,13 @@
+import org.jetbrains.dokka.gradle.DokkaTask
+
 plugins {
     kotlin("jvm") version "1.6.10"
     `maven-publish`
     signing
 
-    // dokka
     id("net.ltgt.errorprone") version "2.0.2"
+    id("org.ajoberstar.git-publish") version "3.0.0"
+    id("org.jetbrains.dokka") version "1.6.10"
     id("org.jetbrains.kotlinx.binary-compatibility-validator") version "0.8.0"
     id("org.jmailen.kotlinter") version "3.7.0"
 }
@@ -67,14 +70,30 @@ if (signingKeyAsciiArmored.isPresent) {
 }
 
 java {
-    withJavadocJar()
     withSourcesJar()
+}
+
+val dokkaJavadocJar by tasks.register<Jar>("dokkaJavadocJar") {
+    dependsOn(tasks.dokkaJavadoc)
+    group = "Documentation"
+    from(tasks.dokkaJavadoc.flatMap { it.outputDirectory })
+    archiveClassifier.set("javadoc")
+}
+
+val dokkaHtmlJar by tasks.register<Jar>("dokkaHtmlJar") {
+    dependsOn(tasks.dokkaHtml)
+    group = "Documentation"
+    from(tasks.dokkaHtml.flatMap { it.outputDirectory })
+    archiveClassifier.set("html-doc")
 }
 
 publishing {
     publications {
         create<MavenPublication>("streemServerSdk") {
             from(components["java"])
+
+            artifact(dokkaJavadocJar)
+            artifact(dokkaHtmlJar)
 
             pom {
                 name.set(artifactId)
@@ -128,6 +147,25 @@ publishing {
                     password = sonatypeApiKey.get()
                 }
             }
+        }
+    }
+}
+
+val dokkaJavaHtml by tasks.registering(DokkaTask::class) {
+    dependencies {
+        plugins("org.jetbrains.dokka:kotlin-as-java-plugin:1.6.10")
+    }
+}
+
+gitPublish {
+    repoUri.set("https://github.com/streem/streem-sdk-jvm.git")
+    branch.set("gh-pages")
+    contents {
+        from(tasks.dokkaHtml.flatMap { it.outputDirectory }) {
+            into("kotlin")
+        }
+        from(dokkaJavaHtml.flatMap { it.outputDirectory }) {
+            into("java")
         }
     }
 }
