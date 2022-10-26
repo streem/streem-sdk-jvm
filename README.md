@@ -94,7 +94,7 @@ First, provide the `token` created above to your front-end browser client.  Next
 For example, to create an `iframe` to the root page in Streem, you might have:
 
 ```html
-<iframe src="https://{company-code}.streempro.app#token={token}" />
+<iframe src="https://{company-code}.streempro.app/embed#token={token}" />
 ```
 
 Be sure to substitute `{company-code}` and `{token}` for the correct values.
