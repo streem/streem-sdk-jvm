@@ -58,6 +58,9 @@ val token = streem.buildToken(user.id) {
     // Once the session has started, how long can the user remain logged in
     // (4 hours is the default) 
     sessionExpiration = Duration.ofHours(4)
+    
+    // If using the Group Reservation feature, set the reservation sid from the API response
+    reservationSid = "rsv_abc123"
 }
 ```
 
@@ -79,6 +82,9 @@ var token = streem.buildToken(user.id)
         // Once the session has started, how long can the user remain logged in
         // (4 hours is the default) 
         .sessionExpiration(Duration.ofHours(4))
+        
+        // If using the Group Reservation feature, set the reservation sid from the API response
+        .reservationSid("rsv_abc123")
 
         // Finally, call `build()` to generate the token string
         .build();

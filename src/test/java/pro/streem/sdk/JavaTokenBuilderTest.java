@@ -20,6 +20,7 @@ class JavaTokenBuilderTest {
         final var email = "test@streem.pro";
         final var tokenExpiration = Duration.ofMinutes(10);
         final var sessionExpiration = Duration.ofHours(1);
+        final var reservationSid = "rsv_abc123";
 
         final var streem = Streem.getInstance(TEST_API_KEY_ID, TEST_API_KEY_SECRET, TEST_API_ENVIRONMENT);
 
@@ -29,6 +30,7 @@ class JavaTokenBuilderTest {
                 .email(email)
                 .tokenExpiration(tokenExpiration)
                 .sessionExpiration(sessionExpiration)
+                .reservationSid(reservationSid)
                 .build();
 
         final var claims = assertDoesNotThrow(() -> SignedJWT.parse(token).getJWTClaimsSet());
@@ -40,6 +42,7 @@ class JavaTokenBuilderTest {
         assertEquals(claims.getStringClaim("name"), name);
         assertEquals(claims.getURIClaim("picture"), avatarUri);
         assertEquals(claims.getStringClaim("email"), email);
+        assertEquals(claims.getStringClaim("streem:reservation_sid"), reservationSid);
 
         // Expiration dates should be within a few seconds
         assertTrue(Duration.between(Instant.now(), claims.getExpirationTime().toInstant())

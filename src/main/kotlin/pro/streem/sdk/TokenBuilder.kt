@@ -42,5 +42,11 @@ public class TokenBuilder internal constructor(private val config: Config, userI
         token.sessionExpiration = sessionExpiration ?: StreemToken.DefaultSessionExpiration
     }
 
+    public val reservationSid: String? get() = token.reservationSid
+
+    public fun reservationSid(reservationSid: String?): TokenBuilder = apply {
+        token.reservationSid = reservationSid
+    }
+
     public fun build(): String = token.serialize(config)
 }
