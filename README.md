@@ -8,7 +8,7 @@ Add the Streem SDK dependency to your project's `build.gradle` file:
 
 ```groovy
 dependencies {
-    implementation("pro.streem:streem-server-sdk:0.1.1")
+    implementation("pro.streem:streem-server-sdk:0.2.0")
 }
 ```
 
