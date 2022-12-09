@@ -19,6 +19,7 @@ public class StreemToken internal constructor(
     public var avatarUri: URI? = null
     public var tokenExpiration: Duration = DefaultTokenExpiration
     public var sessionExpiration: Duration = DefaultSessionExpiration
+    public var reservationSid: String? = null
 
     public companion object {
         public val DefaultTokenExpiration: Duration = Duration.ofMinutes(5)
@@ -42,6 +43,7 @@ internal fun StreemToken.serialize(config: Config): String = SignedJWT(
         name?.let { claim("name", it) }
         email?.let { claim("email", it) }
         avatarUri?.let { claim("picture", it.toString()) }
+        reservationSid?.let { claim("streem:reservation_sid", it) }
     }.build()
 ).apply {
     try {

@@ -18,6 +18,7 @@ internal class TokenBuilderTest {
         val email = "test@streem.pro"
         val tokenExpiration = Duration.ofMinutes(10)
         val sessionExpiration = Duration.ofHours(1)
+        val reservationSid = "rsv_abc123"
 
         val streem = Streem.getInstance(
             apiKeyId = TEST_API_KEY_ID,
@@ -31,6 +32,7 @@ internal class TokenBuilderTest {
             this.email = email
             this.tokenExpiration = tokenExpiration
             this.sessionExpiration = sessionExpiration
+            this.reservationSid = reservationSid
         }
 
         val claims = assertDoesNotThrow { SignedJWT.parse(token).jwtClaimsSet }
@@ -42,6 +44,7 @@ internal class TokenBuilderTest {
         assertEquals(claims.getStringClaim("name"), name)
         assertEquals(claims.getURIClaim("picture"), avatarUri)
         assertEquals(claims.getStringClaim("email"), email)
+        assertEquals(claims.getStringClaim("streem:reservation_sid"), reservationSid)
 
         // Expiration dates should be within a few seconds
         assertTrue {
