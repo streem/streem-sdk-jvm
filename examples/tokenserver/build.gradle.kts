@@ -17,7 +17,7 @@ repositories {
 
 dependencies {
     val ktorVersion = "1.6.7"
-    val streemSdkVersion = "0.2.0"
+    val streemSdkVersion = "0.2.1"
 
     implementation("io.ktor:ktor-server-core:$ktorVersion")
     implementation("io.ktor:ktor-server-netty:$ktorVersion")
