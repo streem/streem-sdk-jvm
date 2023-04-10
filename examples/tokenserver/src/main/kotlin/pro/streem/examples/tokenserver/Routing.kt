@@ -22,7 +22,7 @@ fun Application.configureRouting() {
                 val token = streem.buildToken(req.id) {
                     name = req.name
                     email = req.email
-                    avatarUri = URI.create("https://robohash.org/$userId")
+                    avatarUri = URI.create("https://robohash.org/$userId.png")
                 }
 
                 call.respond(TokenResponse(token = token))
